@@ -18,3 +18,11 @@ def process_file(input_filename, output_filename):
         print(f"Error: File '{input_filename}' not found.")
     except Exception as e:
         print(f"An error occurred: {e}")
+
+if __name__ == '__main__':
+    if len(sys.argv) != 3:
+        print("Usage: python wp1.py input_filename output_filename")
+    else:
+        input_filename = sys.argv[1]
+        output_filename = sys.argv[2]
+        process_file(input_filename, output_filename)
